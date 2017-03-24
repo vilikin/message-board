@@ -2,12 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #018ebe;
-}
-
-.welcome-item {
-    padding: 2em !important;
-    font-family: 'Indie Flower', cursive;
-    text-align: center;
+    width: 100%;
 }
 
 .msg-bar {
@@ -32,16 +27,39 @@ input {
 }
 
 .item-container {
-    width: 100%;
-    height: 100vh;
+     width: 100%;
+     height: 100vh;
 }
 
 .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 2em;
     padding: 1em;
     width: 100%;
     color: white;
     border-bottom: 0.2em solid white;
+}
+
+.item:last-child {
+    margin-bottom: 1.5em;
+}
+
+.jdl-text {
+    font-family: 'Indie Flower', cursive;
+    flex: 7;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+}
+
+.jdl-votes {
+    width: 1em;
+    flex: auto;
+    text-align: center;
 }
 
 .item-color-1 {
@@ -62,17 +80,4 @@ input {
 
 .item-color-5 {
     background-color: #999124;
-}
-
-table {
-    width: 100%;
-}
-
-.jdl-text {
-    font-family: 'Indie Flower', cursive;
-    padding-right: 2em;
-}
-
-.votes {
-    padding-right: 2em;
 }

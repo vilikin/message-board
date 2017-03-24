@@ -48,31 +48,22 @@ class Item extends Component {
 
     render() {
         return <div className={this.props.data.color + " item"} onDoubleClick={this.deleteItem}>
-            <table>
-                <tbody>
-                <tr>
-                    <td>
-                        <span className="jdl-text">
-                            {this.props.data.message}
-                        </span>
-                    </td>
-                    <td className="text-center">
+            <div className="jdl-text">
+                <div className="jdl-text-content">{this.props.data.message}</div>
+            </div>
+            <div className="jdl-votes">
+                <div className="jdl-vote-block">
+                    <i className="fa fa-arrow-circle-up" onDoubleClick={this.plus} onClick={this.plus}/>
+                </div>
 
-                            <div className="row">
-                                <i className="fa fa-arrow-circle-up" onDoubleClick={this.plus} onClick={this.plus}/>
-                            </div>
+                <div className="jdl-vote-block">
+                    {this.props.data.votes}
+                </div>
 
-                            <div className="row">
-                                <span>{this.props.data.votes}</span>
-                            </div>
-
-                            <div className="row">
-                                <i className="fa fa-arrow-circle-down" onDoubleClick={this.minus} onClick={this.minus}/>
-                            </div>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
+                <div className="jdl-vote-block">
+                    <i className="fa fa-arrow-circle-down" onDoubleClick={this.minus} onClick={this.minus}/>
+                </div>
+            </div>
         </div>;
     }
 }

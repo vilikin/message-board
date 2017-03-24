@@ -21,7 +21,7 @@ class MessageBar extends Component {
         if (this.state.message.length > 1) {
             store.dispatch({type: "ADD_ITEM", message: this.state.message});
             this.setState({message: ""});
-            $("html, body").animate({ scrollTop: 0 }, "slow");
+            $("body").animate({ scrollTop: 0 }, "slow");
         }
     };
 
